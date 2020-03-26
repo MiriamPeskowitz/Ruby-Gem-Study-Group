@@ -27,6 +27,9 @@ module Covid
 
 		def global_stats
 			puts "you asked for global stats"
+			#Write code to: scrape, get number, display 
+			global_number = Covid::Scraper.new.load_global
+			puts "The global number is #{global_number}."
 			main_menu
 		end 
 

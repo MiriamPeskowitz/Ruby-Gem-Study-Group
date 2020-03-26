@@ -17,10 +17,20 @@ module Covid
 				c.save
 			end 
 		end 
+
+		def load_global
+			@page = Nokogiri::HTML(open('https://www.worldometers.info/coronavirus'))
+			global_number = @page.search(".maincounter-number span")
+			global_number = global_number[0].text.strip
+		
+		end 
 	end
 end  
 
-
+	# .each do |el|
+			# 	number = el.search('span')[0]
+			# 	global_number = number.text.strip
+			# end 
 # open webpage
 			# parse with ng
 			# for each table row
