@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# require 'pry'
+
+require "bundler/setup"
+require "covid"
+
+# puts "welcome"
+
+Covid::Menu.new.start
+
+
